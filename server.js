@@ -61,13 +61,12 @@ db.initialize(dbName, collectionName, function (dbCollection) { // successCallba
       dbCollection.insertOne(item, (error, result) => { // callback of insertOne
          if (error) throw error;
          // return updated list
-         dbCollection.find().toArray((_error, _result) => { // callback of find
-            if (_error) throw _error;
+         //dbCollection.find().toArray((_error, _result) => { // callback of find
+         //   if (_error) throw _error;
             //response.json('OK!');
             response.send('OK!');
-            response.status(200);
-            
-         });
+            response.status(200); 
+         //});
       });
    });
 
